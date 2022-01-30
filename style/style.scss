@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$bodyColor:#F7F8FD;
+$primaryColor:#4862E7;
+$accentColor:#AF1FE9;
+$hoverColor:#F2F5FD;
+$fontColor:#2a2b30;
+
+body{
+    // font-family: 'Outfit', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: $fontColor;
+    background-color: $bodyColor;
+    font-size: 15px;
+}
+
+.rounded{
+    border-radius: 10px;
+}
+.padding-20{
+    padding: 20px;
+}
+.bg-color{
+    background-color: white;
+}
+.page{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    width: 100%;
+    height: 100vh;
+    // background-color: white;
+    // border-radius: 10px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-column-gap: 20px;
+    .left-section{
+        align-self: start;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        .introduction{
+            background-image: linear-gradient(to bottom right, #538BEF, #E69091);
+            color: white;
+            // background-color: $primaryColor;
+            h2{
+                padding: 0px;
+                margin:30px 0px 10px 0px;
+            }
+            p{
+                margin:0px;
+                opacity: .8;
+                font-size: 15px;
+            }
+        }
+        .tags{
+            // align-self: start;
+            .tag{
+                margin:0px 10px 10px 0px;
+                cursor: pointer;
+                float: left;
+                color: $primaryColor;
+                padding: 5px 10px;
+                border-radius: 5px;
+                background-color: $hoverColor;
+            }
+            .tag-active{    
+                background-color: $primaryColor;
+                color: white;
+            }
+        }
+        .statuses {
+            // align-self: start;
+            .statuses-header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                // background-color: rebeccapurple;
+                h3{
+                    margin: 0px;
+                }
+                margin-bottom: 10px;
+            }
+            .status-div{
+                display: grid;
+                grid-template-columns: 20px 1fr 20px;
+                align-items: center;
+            }
+            span{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+            }
+            .status-planned{
+                background-color: #EFA192;
+            }
+            .status-inprogress{
+                background-color: #9C20CD;
+            }
+            .status-live{
+                background-color: #68BAEC;
+            }
+        }
+    }
+}
+
