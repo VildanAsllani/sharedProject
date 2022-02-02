@@ -24,11 +24,35 @@ body{
 .bg-color{
     background-color: white;
 }
+
+.tags{
+    // align-self: start;
+    .tag{
+        margin:0px 10px 10px 0px;
+        cursor: pointer;
+        float: left;
+        color: $primaryColor;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: $hoverColor;
+        font-size: 14px;
+        transition: all .3s;
+        &:hover{
+            background-color: $primaryColor;
+            color: white;
+        }
+    }
+    .tag-active{    
+        background-color: $primaryColor;
+        color: white;
+    }
+}
+
 .page{
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 1100px;
+    max-width: 1200px;
     width: 100%;
     height: 100vh;
     // background-color: white;
@@ -55,22 +79,7 @@ body{
                 font-size: 15px;
             }
         }
-        .tags{
-            // align-self: start;
-            .tag{
-                margin:0px 10px 10px 0px;
-                cursor: pointer;
-                float: left;
-                color: $primaryColor;
-                padding: 5px 10px;
-                border-radius: 5px;
-                background-color: $hoverColor;
-            }
-            .tag-active{    
-                background-color: $primaryColor;
-                color: white;
-            }
-        }
+
         .statuses {
             // align-self: start;
             .statuses-header{
@@ -105,22 +114,40 @@ body{
         }
     }
     .right-section{
+        display: grid;
+        align-self: start;
+        grid-row-gap: 20px;
              header{
-                 
-                 padding: 10px;
-                 background: #413391;
+                 padding: 20px;
+                 background: #373E68;
                  display:flex;
                  justify-content: space-between;
                  align-items: center;
                  color: white;
 
                  .left-header {
-                     display: flex;
+                    //  display: flex;
+                    display: grid;
+                    grid-template-columns: 70px 1fr 1fr;
+                     min-width: 300px;
                      justify-content: space-between;
-                span {
-                    border: 1px solid black;
+                    //  background-color: lightgreen;
+                     align-items: center;
+                     div{
+                        label{
+                            opacity: .7;
+                        }
+                        .selection{
+                            border: none;
+                            color: white;
+                            padding: 10px;
+                            background-color: transparent;
+                        }
+                     }
+                     span {
+                        align-self: center;
+                    }
                 }
-            }
                 .button-add {
                     padding: 10px 30px;
                     background-color: $accentColor;
@@ -130,7 +157,51 @@ body{
                     font-size: 15px;
                 }
              }
-
+        section{
+            display: grid;
+            grid-row-gap: 20px;
+            margin-bottom: 100px;
+            .suggestion{
+                display: grid;
+                grid-column-gap: 20px;
+                grid-template-columns: 50px 1fr 100px ;
+                .suggestions-like{
+                    text-align: center;
+                    .span-color{
+                        color: $primaryColor;
+                        display: grid;  
+                        grid-gap: 5px;
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: $hoverColor;
+                        i{
+                            margin: 0px;
+                        }
+                        p{
+                            margin: 0px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .suggestion-body{
+                    .low-opacity{
+                        opacity: .7;
+                    }
+                }
+                .suggestion-comments{
+                    display: flex;
+                    align-self: center;
+                    justify-content: center;
+                    i{
+                        color: #CCD0EA;
+                        padding-right: 10px;
+                    }
+                    strong{
+                        font-size: 19px;
+                    }
+                }
+            }
+        }
     }
 }
 
