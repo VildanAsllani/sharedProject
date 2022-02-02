@@ -104,5 +104,33 @@ body{
             }
         }
     }
+    .right-section{
+             header{
+                 
+                 padding: 10px;
+                 background: #413391;
+                 display:flex;
+                 justify-content: space-between;
+                 align-items: center;
+                 color: white;
+
+                 .left-header {
+                     display: flex;
+                     justify-content: space-between;
+                span {
+                    border: 1px solid black;
+                }
+            }
+                .button-add {
+                    padding: 10px 30px;
+                    background-color: $accentColor;
+                    color: white;
+                    border-radius: 10px;
+                    text-decoration: none;
+                    font-size: 15px;
+                }
+             }
+
+    }
 }
 
