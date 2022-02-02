@@ -6,6 +6,41 @@ body {
   font-size: 15px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn i {
+  padding-right: 10px;
+}
+
+.btn-default:hover {
+  background-color: #F2F5FD;
+  color: #4862E7;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.btn-primary {
+  -webkit-box-shadow: 1px 1px 2px #e9e9e9;
+          box-shadow: 1px 1px 2px #e9e9e9;
+  background-color: #4862E7;
+  color: white;
+}
+
+.btn-accent {
+  -webkit-box-shadow: 1px 1px 2px #e9e9e9;
+          box-shadow: 1px 1px 2px #e9e9e9;
+  background-color: #AF1FE9;
+  color: white;
+}
+
 .rounded {
   border-radius: 10px;
   -webkit-box-shadow: 1px 1px 2px #e9e9e9;
@@ -16,8 +51,17 @@ body {
   padding: 20px;
 }
 
+.padding-20-40 {
+  padding: 20px 40px;
+}
+
 .bg-color {
   background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #2a2b30;
 }
 
 .tags .tag {
@@ -155,8 +199,8 @@ body {
 .page .right-section header .left-header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 70px 1fr 1fr;
-      grid-template-columns: 70px 1fr 1fr;
+  -ms-grid-columns: 30px auto 1fr;
+      grid-template-columns: 30px auto 1fr;
   min-width: 300px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -164,6 +208,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.page .right-section header .left-header div {
+  padding-left: 20px;
 }
 
 .page .right-section header .left-header div label {
@@ -192,14 +240,13 @@ body {
   font-size: 15px;
 }
 
-.page .right-section section {
+section {
   display: -ms-grid;
   display: grid;
   grid-row-gap: 20px;
-  margin-bottom: 100px;
 }
 
-.page .right-section section .suggestion {
+section .suggestion {
   display: -ms-grid;
   display: grid;
   grid-column-gap: 20px;
@@ -207,11 +254,11 @@ body {
       grid-template-columns: 50px 1fr 100px;
 }
 
-.page .right-section section .suggestion .suggestions-like {
+section .suggestion .suggestions-like {
   text-align: center;
 }
 
-.page .right-section section .suggestion .suggestions-like .span-color {
+section .suggestion .suggestions-like .span-color {
   color: #4862E7;
   display: -ms-grid;
   display: grid;
@@ -221,20 +268,20 @@ body {
   background-color: #F2F5FD;
 }
 
-.page .right-section section .suggestion .suggestions-like .span-color i {
+section .suggestion .suggestions-like .span-color i {
   margin: 0px;
 }
 
-.page .right-section section .suggestion .suggestions-like .span-color p {
+section .suggestion .suggestions-like .span-color p {
   margin: 0px;
   font-weight: bold;
 }
 
-.page .right-section section .suggestion .suggestion-body .low-opacity {
+section .suggestion .suggestion-body .low-opacity {
   opacity: .7;
 }
 
-.page .right-section section .suggestion .suggestion-comments {
+section .suggestion .suggestion-comments {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,12 +292,122 @@ body {
           justify-content: center;
 }
 
-.page .right-section section .suggestion .suggestion-comments i {
+section .suggestion .suggestion-comments i {
   color: #CCD0EA;
   padding-right: 10px;
 }
 
-.page .right-section section .suggestion .suggestion-comments strong {
+section .suggestion .suggestion-comments strong {
   font-size: 19px;
+}
+
+.suggestion-page {
+  margin: 50px auto auto auto;
+  width: 100%;
+  max-width: 1000px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+}
+
+.suggestion-page header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.suggestion-page .page-comments {
+  -ms-grid-row: 40;
+  grid-row: 40px;
+}
+
+.suggestion-page .page-comments div h3 {
+  margin-bottom: 40px;
+}
+
+.suggestion-page .page-comments .replies {
+  margin: 30px 0px 0px 110px;
+}
+
+.suggestion-page .page-comments .comments {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.suggestion-page .page-comments .comments, .suggestion-page .page-comments .replies {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr;
+      grid-template-columns: 50px 1fr;
+  grid-gap: 40px;
+}
+
+.suggestion-page .page-comments .comments .user-profile img, .suggestion-page .page-comments .replies .user-profile img {
+  width: 100%;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 2px 4px #aeaeae;
+          box-shadow: 2px 2px 4px #aeaeae;
+}
+
+.suggestion-page .page-comments .comments .user-details h4, .suggestion-page .page-comments .replies .user-details h4 {
+  margin: 0px;
+}
+
+.suggestion-page .page-comments .comments .user-details i, .suggestion-page .page-comments .replies .user-details i {
+  font-size: 14px;
+}
+
+.suggestion-page .page-comments .comments .user-details p, .suggestion-page .page-comments .replies .user-details p {
+  text-align: justify;
+  color: #7f8087;
+}
+
+.suggestion-page .page-comments .comments .user-details a, .suggestion-page .page-comments .replies .user-details a {
+  float: right;
+}
+
+.suggestion-page .page-add-comments form {
+  display: -ms-grid;
+  display: grid;
+}
+
+.suggestion-page .page-add-comments form textarea {
+  border: none;
+  background-color: #F7F8FD;
+  padding: 20px;
+  resize: none;
+}
+
+.suggestion-page .page-add-comments form textarea:focus {
+  outline: 2px solid #AF1FE9;
+  border-radius: 2px;
+}
+
+.suggestion-page .page-add-comments form div {
+  margin-top: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.suggestion-page .page-add-comments form div label {
+  opacity: .7;
+}
+
+input[type=submit] {
+  background-color: none;
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */
