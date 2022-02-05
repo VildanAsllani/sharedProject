@@ -4,6 +4,7 @@ body {
   color: #2a2b30;
   background-color: #F7F8FD;
   font-size: 15px;
+  margin: 0 .5rem 0 .5rem;
 }
 
 html {
@@ -11,48 +12,51 @@ html {
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: .7rem 1rem;
   border-radius: 10px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
   cursor: pointer;
 }
 
 .btn i {
-  padding-right: 10px;
+  padding-right: 1rem;
+}
+
+.btn-default {
+  color: #4862E7;
 }
 
 .btn-default:hover {
   background-color: #F2F5FD;
-  color: #4862E7;
-  -webkit-transition: all .3s;
-  transition: all .3s;
 }
 
 .btn-primary {
-  -webkit-box-shadow: 1px 1px 2px #e9e9e9;
-          box-shadow: 1px 1px 2px #e9e9e9;
   background-color: #4862E7;
   color: white;
 }
 
+.btn-primary:hover {
+  background-color: #5972f0;
+}
+
 .btn-accent {
-  -webkit-box-shadow: 1px 1px 2px #e9e9e9;
-          box-shadow: 1px 1px 2px #e9e9e9;
   background-color: #AF1FE9;
   color: white;
 }
 
 .rounded {
-  border-radius: 10px;
+  border-radius: 1rem;
   -webkit-box-shadow: 1px 1px 2px #e9e9e9;
           box-shadow: 1px 1px 2px #e9e9e9;
 }
 
 .padding-20 {
-  padding: 20px;
+  padding: 1.5rem;
 }
 
 .padding-20-40 {
-  padding: 20px 40px;
+  padding: 1.5rem 3rem;
 }
 
 .bg-color {
@@ -65,14 +69,14 @@ a {
 }
 
 .tags .tag {
-  margin: 0px 10px 10px 0px;
+  margin: 0 1rem 1rem 0;
   cursor: pointer;
   float: left;
   color: #4862E7;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
   background-color: #F2F5FD;
-  font-size: 14px;
+  font-size: .9rem;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -88,17 +92,17 @@ a {
 }
 
 .page {
-  margin-top: 50px;
+  margin: 3rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 300px 1fr;
       grid-template-columns: 300px 1fr;
-  grid-column-gap: 20px;
+  grid-column-gap: 1.5rem;
 }
 
 .page .left-section {
@@ -108,24 +112,23 @@ a {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  grid-gap: 20px;
+  grid-gap: 1.5rem;
 }
 
 .page .left-section .introduction {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#538BEF), to(#E69091));
-  background-image: linear-gradient(to bottom right, #538BEF, #E69091);
+  background-image: -webkit-gradient(linear, left top, right top, from(#3C94EF), to(#CC5681));
+  background-image: linear-gradient(to right, #3C94EF, #CC5681);
   color: white;
 }
 
 .page .left-section .introduction h2 {
-  padding: 0px;
-  margin: 30px 0px 10px 0px;
+  padding: 0;
+  margin: 2rem 0 1rem 0;
 }
 
 .page .left-section .introduction p {
   margin: 0px;
   opacity: .8;
-  font-size: 15px;
 }
 
 .page .left-section .statuses .statuses-header {
@@ -138,18 +141,18 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: .7rem;
 }
 
 .page .left-section .statuses .statuses-header h3 {
-  margin: 0px;
+  margin: 0;
 }
 
 .page .left-section .statuses .status-div {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20px 1fr 20px;
-      grid-template-columns: 20px 1fr 20px;
+  -ms-grid-columns: 1.5rem 1fr 1.5rem;
+      grid-template-columns: 1.5rem 1fr 1.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -178,11 +181,11 @@ a {
   display: grid;
   -ms-grid-row-align: start;
       align-self: start;
-  grid-row-gap: 20px;
+  grid-row-gap: 1.5rem;
 }
 
 .page .right-section header {
-  padding: 20px;
+  padding: 1.5rem;
   background: #373E68;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,7 +214,7 @@ a {
 }
 
 .page .right-section header .left-header div {
-  padding-left: 20px;
+  padding-left: 1.5rem;
 }
 
 .page .right-section header .left-header div label {
@@ -221,7 +224,7 @@ a {
 .page .right-section header .left-header div .selection {
   border: none;
   color: white;
-  padding: 10px;
+  padding: 1rem;
   background-color: transparent;
 }
 
@@ -231,25 +234,16 @@ a {
       align-self: center;
 }
 
-.page .right-section header .button-add {
-  padding: 10px 30px;
-  background-color: #AF1FE9;
-  color: white;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 15px;
-}
-
 section {
   display: -ms-grid;
   display: grid;
-  grid-row-gap: 20px;
+  grid-row-gap: 1.5rem;
 }
 
 section .suggestion {
   display: -ms-grid;
   display: grid;
-  grid-column-gap: 20px;
+  grid-column-gap: 1.5rem;
   -ms-grid-columns: 50px 1fr 100px;
       grid-template-columns: 50px 1fr 100px;
 }
@@ -262,18 +256,18 @@ section .suggestion .suggestions-like .span-color {
   color: #4862E7;
   display: -ms-grid;
   display: grid;
-  grid-gap: 5px;
-  padding: 10px;
-  border-radius: 10px;
+  grid-gap: 1rem;
+  padding: 1rem 0rem;
+  border-radius: .7rem;
   background-color: #F2F5FD;
 }
 
 section .suggestion .suggestions-like .span-color i {
-  margin: 0px;
+  margin: 0;
 }
 
 section .suggestion .suggestions-like .span-color p {
-  margin: 0px;
+  margin: 0;
   font-weight: bold;
 }
 
@@ -294,20 +288,22 @@ section .suggestion .suggestion-comments {
 
 section .suggestion .suggestion-comments i {
   color: #CCD0EA;
-  padding-right: 10px;
+  padding-right: 1rem;
 }
 
 section .suggestion .suggestion-comments strong {
-  font-size: 19px;
+  font-size: 1rem;
 }
 
 .suggestion-page {
-  margin: 50px auto auto auto;
+  margin: 3rem;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   max-width: 1000px;
   display: -ms-grid;
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 1.5rem;
 }
 
 .suggestion-page header {
@@ -323,20 +319,19 @@ section .suggestion .suggestion-comments strong {
 }
 
 .suggestion-page .page-comments {
-  -ms-grid-row: 40;
-  grid-row: 40px;
+  grid-gap: 2rem;
 }
 
 .suggestion-page .page-comments div h3 {
-  margin-bottom: 40px;
+  margin-bottom: 2rem;
 }
 
 .suggestion-page .page-comments .replies {
-  margin: 30px 0px 0px 110px;
+  margin: 2rem 0 0 100px;
 }
 
 .suggestion-page .page-comments .comments {
-  padding-bottom: 30px;
+  padding-bottom: 2rem;
   border-bottom: 1px solid #eeeeee;
 }
 
@@ -345,7 +340,7 @@ section .suggestion .suggestion-comments strong {
   display: grid;
   -ms-grid-columns: 50px 1fr;
       grid-template-columns: 50px 1fr;
-  grid-gap: 40px;
+  grid-gap: 3rem;
 }
 
 .suggestion-page .page-comments .comments .user-profile img, .suggestion-page .page-comments .replies .user-profile img {
@@ -356,11 +351,11 @@ section .suggestion .suggestion-comments strong {
 }
 
 .suggestion-page .page-comments .comments .user-details h4, .suggestion-page .page-comments .replies .user-details h4 {
-  margin: 0px;
+  margin: 0;
 }
 
 .suggestion-page .page-comments .comments .user-details i, .suggestion-page .page-comments .replies .user-details i {
-  font-size: 14px;
+  font-size: .9rem;
 }
 
 .suggestion-page .page-comments .comments .user-details p, .suggestion-page .page-comments .replies .user-details p {
@@ -380,7 +375,7 @@ section .suggestion .suggestion-comments strong {
 .suggestion-page .page-add-comments form textarea {
   border: none;
   background-color: #F7F8FD;
-  padding: 20px;
+  padding: 1.5rem;
   resize: none;
 }
 
@@ -390,7 +385,7 @@ section .suggestion .suggestion-comments strong {
 }
 
 .suggestion-page .page-add-comments form div {
-  margin-top: 20px;
+  margin-top: 1.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -409,5 +404,34 @@ section .suggestion .suggestion-comments strong {
 input[type=submit] {
   background-color: none;
   border: none;
+}
+
+@media screen and (max-width: 850px) {
+  .page {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .page .left-section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .page {
+    margin: 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .page .left-section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding-bottom: 1.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
